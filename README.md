@@ -9,7 +9,9 @@ by [Sandy Ryza](https://github.com/sryza), [Uri Laserson](https://github.com/las
 
 ### Build
 
-[Apache Maven](http://maven.apache.org/) 3.0.5+ and Java 7+ are required to build. From the root level of the project, run `mvn package` to compile artifacts into `target/` subdirectories beneath each chapter's directory.
+[Apache Maven](http://maven.apache.org/) 3.0.5+ and Java 7+ are required to build.
+From the root level of the project, run `mvn package` to compile artifacts into `target/` subdirectories beneath
+each chapter's directory.
 
 ### Data Sets
 
@@ -25,3 +27,7 @@ by [Sandy Ryza](https://github.com/sryza), [Uri Laserson](https://github.com/las
 - Chapter 11: https://github.com/thunder-project/thunder/tree/v0.4.1/python/thunder/utils/data/fish/tif-stack
 
 [![Build Status](https://travis-ci.org/sryza/aas.png?branch=master)](https://travis-ci.org/sryza/aas)
+
+1.可以通过IntelliJ IDEA里的Git插件自动倒入
+2.倒入项目后,需要先配置maven(修改为本地仓库和版本),然后再将该项目修改为maven类型
+3.先倒入需要模块,如simplesparkProject
