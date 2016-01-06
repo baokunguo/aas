@@ -31,3 +31,5 @@ each chapter's directory.
 1.可以通过IntelliJ IDEA里的Git插件自动倒入
 2.倒入项目后,需要先配置maven(修改为本地仓库和版本),然后再将该项目修改为maven类型
 3.先倒入需要模块,如simplesparkProject
+4.测试本地模式spark并下载donation.zip数据(迅雷比较快)
+5.本地模式调试中
