@@ -29,6 +29,7 @@ object RunRDF {
 
     // Split into 80% train, 10% cross validation, 10% test
     val Array(trainData, cvData, testData) = data.randomSplit(Array(0.8, 0.1, 0.1))
+
     trainData.cache()
     cvData.cache()
     testData.cache()
@@ -47,7 +48,6 @@ object RunRDF {
   def simpleDecisionTree(trainData: RDD[LabeledPoint], cvData: RDD[LabeledPoint]): Unit = {
     // Build a simple default DecisionTreeModel
     val model = DecisionTree.trainClassifier(trainData, 7, Map[Int,Int](), "gini", 4, 100)
-
     val metrics = getMetrics(model, cvData)
 
     println(metrics.confusionMatrix)
@@ -94,6 +94,7 @@ object RunRDF {
         yield {
           val model = DecisionTree.trainClassifier(
             trainData, 7, Map[Int,Int](), impurity, depth, bins)
+
           val accuracy = getMetrics(model, cvData).precision
           ((impurity, depth, bins), accuracy)
         }
